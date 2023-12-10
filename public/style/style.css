@@ -1,0 +1,135 @@
+html, body{
+    margin: 0;
+}
+.arbutus-font{
+    font-family: 'Arbutus Slab', serif;
+}
+.roboto-font{
+    font-family: 'Roboto', sans-serif;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #271E1C;
+    color: #ECEBE7;
+    width: 100%;  
+}
+
+nav>*{
+    margin: 15px 30px;
+}
+
+nav a{
+    color: #ECEBE7;
+    font-size: 17px;
+    padding: 19px 10px;
+    margin: 0 -2.5px;
+}
+
+body{
+    background-image: url("../images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #FFF4EA;
+}
+.removeImage{
+    background-image: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+li{
+    /* border: 2px solid black; */
+    /* border-radius: 10px; */
+    margin-bottom: 30px;
+}
+li>*{
+    /* margin-left: 24px; */
+}
+
+.posts-container{
+    width: 90%;
+    margin-bottom: 55px;
+}
+#newPostLink{
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+    font-weight: bold;
+}
+#newPostLink:hover{
+    background-color: #FFF4EA;
+}
+.post-title{
+    font-size: 24px;
+}
+.posts{
+    margin-bottom: 50px;
+    font-style: italic;
+}
+.about, .posts{
+    margin-top: 75px;
+}
+.about + p{
+    width: 60%;
+    font-size: 24px;
+}
+
+.main-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #FFF4EA;
+    font-size: 3vw;
+    
+    margin-top: 100px;
+}
+.main-body>h1{
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #271E1C;
+}
+
+#post-btn {
+    color: #271E1C;
+    border-radius: 15px;
+    /* background-color: #5B4D45; */
+    border: 3px solid #271E1C;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px;
+    letter-spacing: 0.5px;
+}
+a:hover, #post-btn:hover{
+    background-color: #ffc61a80;
+    transition: 0.2s;
+}
+.currentPage{
+    background-color: #ffc61a80 !important;
+}
+
+footer{
+    background-color: #271E1C99;
+    color: #ECEBE7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+a{
+    text-decoration: none;
+}
