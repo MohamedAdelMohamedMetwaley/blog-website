@@ -28,13 +28,17 @@ nav a{
 }
 
 body{
-    background-image: url("../images/background2.jpg");
+    background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-color: #FFF4EA;
 }
 .removeImage{
     background-image: none;
+}
+
+.background2{
+    background-image: url("../images/background2.jpg");
 }
 main{
     display: flex;
@@ -54,6 +58,10 @@ li{
 }
 li>*{
     /* margin-left: 24px; */
+}
+
+.about{
+    
 }
 
 .posts-container{
@@ -100,9 +108,9 @@ li>*{
 }
 
 #post-btn {
-    color: #271E1C;
+    color: #FFF4EA;
     border-radius: 15px;
-    /* background-color: #5B4D45; */
+    background-color: #43352c;
     border: 3px solid #271E1C;
     font-weight: bold;
     font-size: 20px;

@@ -20,6 +20,15 @@ input[type="text"],textarea{
     width: 300px;
     padding: 10px;
     font-size: 16px;
+    border: 3px solid #ccc;
+    transition: 0.4s;
+    outline: none;
+}
+input[type=text]:focus,textarea:focus {
+    border: 3px solid #92c2f2;
+  }
+textarea{
+    resize:none
 }
 form>div{
     width: 100%;

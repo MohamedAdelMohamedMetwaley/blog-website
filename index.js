@@ -29,7 +29,6 @@ app.get("/my-posts", (req, res) => {
     res.render("my-posts.ejs", {
         currentPage: ["", "currentPage", ""],
         postArr: postArr,
-        removeImage: "removeImage"
     });
 })
 
