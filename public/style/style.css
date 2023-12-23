@@ -56,13 +56,6 @@ li{
     /* border-radius: 10px; */
     margin-bottom: 30px;
 }
-li>*{
-    /* margin-left: 24px; */
-}
-
-.about{
-    
-}
 
 .posts-container{
     width: 90%;
@@ -107,6 +100,10 @@ li>*{
     -webkit-text-stroke-color: #271E1C;
 }
 
+.main-body{
+    position: relative;
+}
+
 #post-btn {
     color: #FFF4EA;
     border-radius: 15px;
@@ -116,10 +113,18 @@ li>*{
     font-size: 20px;
     padding: 15px;
     letter-spacing: 0.5px;
-}
+    position: absolute;
+    top: 32vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    
+} 
 a:hover, #post-btn:hover{
     background-color: #ffc61a80;
     transition: 0.2s;
+}
+#post-btn:hover{
+    top: 31.7vh;
 }
 .currentPage{
     background-color: #ffc61a80 !important;
@@ -135,8 +140,6 @@ footer{
     bottom: 0;
     width: 100%;
 }
-
-
 
 a{
     text-decoration: none;
