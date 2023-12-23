@@ -13,7 +13,14 @@ app.get("/", (req, res) => {
         currentPage: ["currentPage","",""],
     })
 })
-
+//todos:
+    //1. Turn this page to a book review page
+    //2. make the home page scrollable with all the content going there
+    //3. Add a database to the project with every user has his own account (this will need a sign in page too)
+    //4. the 'My Blogs' page should contain blogs uploaded by the current user
+    //5. Edit this current user thing to be handled with CSS
+    
+    // -> Make a content area and that's where the posts will go both on the main page and the my posts page
 app.get("/new-post", (req, res) => {
     res.render("new-post.ejs")
 })

@@ -25,6 +25,7 @@ nav a{
     font-size: 17px;
     padding: 19px 10px;
     margin: 0 -2.5px;
+    transition: 0.3s;
 }
 
 body{
@@ -121,9 +122,9 @@ li{
 } 
 a:hover, #post-btn:hover{
     background-color: #ffc61a80;
-    transition: 0.2s;
 }
 #post-btn:hover{
+    transition: 0.2s;
     top: 31.7vh;
 }
 .currentPage{
