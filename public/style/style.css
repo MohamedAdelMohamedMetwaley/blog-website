@@ -25,20 +25,6 @@ nav a {
   transition: 0.3s;
 }
 
-/* --------- Body --------- */
-body {
-  background-image: url("../images/background.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-color: #fff4ea;
-}
-.removeImage {
-  background-image: none;
-}
-.background2 {
-  background-image: url("../images/background2.jpg");
-}
-
 /* --------- My Posts Page --------- */
 
 .posts-container {
@@ -70,10 +56,10 @@ body {
   background-color: #e74c3c;
 }
 .posts-button{
-    color: #fff;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 4px;
+  color: #fff;
+  padding: 7px;
+  font-size: 1em;
+  border-radius: 4px;
 }
 .posts-h1,
 .post-title {
@@ -106,6 +92,16 @@ small {
 }
 
 /* --------- About Page --------- */
+.about-background {
+  background-image: url("../images/background2.jpg");
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .about {
   margin-top: 75px;
 }
@@ -122,16 +118,23 @@ small {
   text-align: center;
   color: #fff4ea;
   font-size: 3vw;
-
-  margin-top: 100px;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-color: #fff4ea;
+  position: relative;
 }
 .main-body > h1 {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: #271e1c;
-}
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 30%;
+  /* transform: translate(-50%, -50%); */
 
-.main-body {
-  position: relative;
 }
 
 #create-post {
@@ -139,13 +142,11 @@ small {
   border-radius: 15px;
   background-color: #43352c;
   border: 3px solid #271e1c;
-  font-weight: bold;
   font-size: 20px;
   padding: 15px;
   letter-spacing: 0.5px;
   position: absolute;
-  top: 32vh;
-  left: 50%;
+  top: 60%;
   transform: translate(-50%, 0);
   transition: 0.3s;
 }
@@ -154,7 +155,7 @@ a:hover,
   background-color: #ffc61a80;
 }
 #create-post:hover {
-  top: 31.7vh;
+  transform: translate(-50%, -5px);
 }
 .currentPage {
   background-color: #ffc61a80 !important;
@@ -162,14 +163,14 @@ a:hover,
 
 /* --------- Footer --------- */
 footer {
-  background-color: #271e1c99;
+  background-color: #271e1c;
   color: #ecebe7;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
+  text-align: center;
+  padding: 10px 0;
   width: 100%;
+}
+footer>*{
+  margin: 0;
 }
 
 /* --------- General Styling --------- */

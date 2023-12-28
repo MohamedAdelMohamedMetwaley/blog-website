@@ -3,9 +3,30 @@
 <div class="main-body roboto-font">
   <h1>What's on your mind?</h1>
   <div>
-    <a id="create-post" class="roboto-font" href="/new-post">Create a Post</a>
+    <a id="create-post" class="arbutus-font" href="/new-post">Create a Post</a>
   </div>
 </div>
+<div class="posts-container">
+  <h1 class="posts-h1">Posts</h1>
 
+  <% if(posts.length == 0){ %>
+  <p style="font-size: 20px">
+    No posts to show yet,
+    <a href="/new-post" id="newPostLink">click here to create your first post!</a>
+  </p>
+  <% } %>
+  <ul>
+    <% posts.forEach(post => { %>
+    <li>
+      <h2 class="post-title"><%= post.title %></h2>
+      <small><%= post.date %></small>
+      <p class="post-text arbutus-font" style="margin-bottom: 30px">
+        <%= post.content %>
+      </p>
+      <small>Author: <%= post.author %></small>
+    </li>
+    <% }); %>
+  </ul>
+</div>
 <%- include("partials/footer.ejs") %>
-<script></script>
+

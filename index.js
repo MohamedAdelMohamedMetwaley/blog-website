@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("index.ejs", {
     currentPage: ["currentPage", "", ""],
+    posts: posts
   });
 });
 //todos:
@@ -31,6 +32,7 @@ app.post("/create", (req, res) => {
     title: req.body.title,
     content: req.body.postContent,
     date: date,
+    author: 'me'
   });
   res.redirect("/my-posts");
 });
