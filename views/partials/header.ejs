@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="style/style.css" />
     <title>Roller Poster</title>
-</head>
-<body class="<%- locals.removeImage %> <%- locals.changeImage %>">
+  </head>
+  <body class="<%- locals.removeImage %> <%- locals.changeImage %>">
     <main>
-        <nav class="navbar arbutus-font">
-            <h2>Roller Poster</h2>
-            <div>
-                <a class="<%= locals.currentPage[0] %>" href="/">Home</a>
-                <a class="<%= locals.currentPage[1] %>" href="/my-posts">My Posts</a>
-                <a class="<%= locals.currentPage[2] %>" href="/about">About</a>
-            </div>
-        </nav>
+      <nav class="navbar roboto-font">
+        <h2>Roller Poster</h2>
+        <div>
+          <a class="<%= locals.currentPage[0] %>" href="/">Home</a>
+          <a class="<%= locals.currentPage[1] %>" href="/my-posts">My Posts</a>
+          <a class="<%= locals.currentPage[2] %>" href="/about">About</a>
+        </div>
+      </nav>

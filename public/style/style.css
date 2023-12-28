@@ -2,12 +2,8 @@ html,
 body {
   margin: 0;
 }
-.arbutus-font {
-  font-family: "Arbutus Slab", serif;
-}
-.roboto-font {
-  font-family: "Roboto", sans-serif;
-}
+
+/* --------- Navbar --------- */
 nav {
   display: flex;
   justify-content: space-between;
@@ -24,11 +20,12 @@ nav > * {
 nav a {
   color: #ecebe7;
   font-size: 17px;
-  padding: 19px 10px;
-  margin: 0 -2.5px;
+  padding: 20px 10px;
+  margin: 0 -2px;
   transition: 0.3s;
 }
 
+/* --------- Body --------- */
 body {
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
@@ -38,30 +35,68 @@ body {
 .removeImage {
   background-image: none;
 }
-
 .background2 {
   background-image: url("../images/background2.jpg");
 }
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-li {
-  /* border: 2px solid black; */
-  /* border-radius: 10px; */
-  margin-bottom: 30px;
-}
+/* --------- My Posts Page --------- */
 
 .posts-container {
-  width: 90%;
-  margin-bottom: 55px;
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px 8px rgba(0, 0, 0, 0.1);
+}
+.posts-container li {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.new-post {
+  background-color: #2ecc71;
+  margin: 20px 0;
+  padding: 10px 15px;
+  font-size: 1em;
+  border-radius: 4px;
+  color: #fff;
+  transition: 0.3s;
+}
+.edit-post, .edit-post:hover {
+  background-color: #007bff;
+}
+.delete-post, .delete-post:hover {
+  background-color: #e74c3c;
+}
+.posts-button{
+    color: #fff;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 4px;
+}
+.posts-h1,
+.post-title {
+  font-family: "Arial", sans-serif;
+}
+.posts-h1 {
+  font-size: 2.5em;
+  margin: 0;
+  margin-bottom: 30px;
+  color: #444;
+}
+.post-title {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #555;
+}
+small {
+  margin-bottom: 20px;
+  color: #888;
+}
+#newPostLink:hover {
+  background-color: #fff4ea;
 }
 #newPostLink {
   text-decoration: none;
@@ -69,18 +104,9 @@ li {
   color: black;
   font-weight: bold;
 }
-#newPostLink:hover {
-  background-color: #fff4ea;
-}
-.post-title {
-  font-size: 24px;
-}
-.posts {
-  margin-bottom: 50px;
-  font-style: italic;
-}
-.about,
-.posts {
+
+/* --------- About Page --------- */
+.about {
   margin-top: 75px;
 }
 .about + p {
@@ -88,6 +114,7 @@ li {
   font-size: 24px;
 }
 
+/* --------- Home Page --------- */
 .main-body {
   display: flex;
   flex-direction: column;
@@ -107,7 +134,7 @@ li {
   position: relative;
 }
 
-#post-btn {
+#create-post {
   color: #fff4ea;
   border-radius: 15px;
   background-color: #43352c;
@@ -123,27 +150,47 @@ li {
   transition: 0.3s;
 }
 a:hover,
-#post-btn:hover {
+#create-post:hover {
   background-color: #ffc61a80;
 }
-#post-btn:hover {
+#create-post:hover {
   top: 31.7vh;
 }
 .currentPage {
   background-color: #ffc61a80 !important;
 }
 
+/* --------- Footer --------- */
 footer {
   background-color: #271e1c99;
   color: #ecebe7;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
 
+/* --------- General Styling --------- */
 a {
   text-decoration: none;
+  color: black;
+}
+.arbutus-font {
+  font-family: "Arbutus Slab", serif;
+}
+.roboto-font {
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

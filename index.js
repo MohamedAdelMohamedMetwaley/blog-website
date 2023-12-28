@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
-var postArr = [];
+var posts = [];
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,7 +26,8 @@ app.get("/new-post", (req, res) => {
 });
 app.post("/create", (req, res) => {
   const date = new Date().toString().split(" ").slice(1, 4).join("-");
-  postArr.push({
+  posts.push({
+    id: posts.length+1,
     title: req.body.title,
     content: req.body.postContent,
     date: date,
@@ -37,7 +38,7 @@ app.post("/create", (req, res) => {
 app.get("/my-posts", (req, res) => {
   res.render("my-posts.ejs", {
     currentPage: ["", "currentPage", ""],
-    posts: postArr,
+    posts: posts,
   });
 });
 
@@ -45,6 +46,16 @@ app.get("/about", (req, res) => {
   res.render("about.ejs", {
     currentPage: ["", "", "currentPage"],
   });
+});
+
+app.get("/my-posts/delete/:id", (req, res) => {
+  const postId = parseInt(req.params.id);
+  const deleteId = posts.findIndex(post => post.id === postId);
+  if (deleteId > -1) 
+    posts.splice(deleteId, 1);
+  else
+   console.log(`post with id ${1} is not found`)
+  res.redirect("/my-posts");
 });
 
 app.listen(port, (req, res) => {

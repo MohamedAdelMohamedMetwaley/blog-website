@@ -1,7 +1,8 @@
 <%- include("partials/header.ejs", {removeImage: "removeImage"}) %>
-
+<!-- TODO: Create edit page -->
 <div class="posts-container">
-  <h1 class="posts arbutus-font">Posts</h1>
+  <h1 class="posts-h1">My Posts</h1>
+
   <% if(posts.length == 0){ %>
   <p style="font-size: 20px">
     No posts to show yet,
@@ -9,21 +10,19 @@
       >click here to create your first post!</a
     >
   </p>
-  <% }%>
+  <% } else { %> <a class="roboto-font new-post" href="/new-post">New Post</a><% } %>
   <ul>
     <% posts.forEach(post => { %>
     <li>
-      <h3 class="post-title roboto-font" style="margin-bottom: 0">
-        <%= post.title %>
-      </h3>
-      <p class="post-text arbutus-font" style="margin-bottom: 50px">
+      <h2 class="post-title"><%= post.title %></h2>
+      <small><%= post.date %></small>
+      <p class="post-text roboto-font" style="margin-bottom: 30px">
         <%= post.content %>
       </p>
-      <small><%= post.date %></small>
+      <a class="roboto-font edit-post posts-button" href="/my-posts/edit/<%= post.id %>">Edit</a>
+      <a class="roboto-font delete-post posts-button" href="/my-posts/delete/<%= post.id %>">Delete</a>
     </li>
     <% }); %>
-    <hr />
   </ul>
 </div>
-
-<%- include("partials/footer.ejs") %>
+<script src="script.js"></script>
