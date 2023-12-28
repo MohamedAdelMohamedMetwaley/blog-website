@@ -25,9 +25,11 @@ app.get("/new-post", (req, res) => {
   res.render("new-post.ejs");
 });
 app.post("/create", (req, res) => {
+  const date = new Date().toString().split(" ").slice(1, 4).join("-");
   postArr.push({
-    postTitle: req.body["title"],
-    postContent: req.body["postContent"],
+    title: req.body.title,
+    content: req.body.postContent,
+    date: date,
   });
   res.redirect("/my-posts");
 });

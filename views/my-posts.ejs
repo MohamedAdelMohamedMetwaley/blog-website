@@ -2,7 +2,7 @@
 
 <div class="posts-container">
   <h1 class="posts arbutus-font">Posts</h1>
-  <% if(postArr.length == 0){ %>
+  <% if(posts.length == 0){ %>
   <p style="font-size: 20px">
     No posts to show yet,
     <a href="/new-post" id="newPostLink"
@@ -11,21 +11,18 @@
   </p>
   <% }%>
   <ul>
-    <% for(i = 0; i < postArr.length; i++){ var content =
-    postArr[i].postContent;%>
-
+    <% posts.forEach(post => { %>
     <li>
       <h3 class="post-title roboto-font" style="margin-bottom: 0">
-        <%= postArr[i].postTitle %>
+        <%= post.title %>
       </h3>
-      <hr />
       <p class="post-text arbutus-font" style="margin-bottom: 50px">
-        <%= content %>
+        <%= post.content %>
       </p>
+      <small><%= post.date %></small>
     </li>
-    <%#
+    <% }); %>
     <hr />
-    %> <% } %>
   </ul>
 </div>
 
