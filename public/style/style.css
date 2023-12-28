@@ -133,8 +133,6 @@ small {
   width: 100%;
   text-align: center;
   top: 30%;
-  /* transform: translate(-50%, -50%); */
-
 }
 
 #create-post {
@@ -155,7 +153,7 @@ a:hover,
   background-color: #ffc61a80;
 }
 #create-post:hover {
-  transform: translate(-50%, -5px);
+  transform: translate(-50%, -2px);
 }
 .currentPage {
   background-color: #ffc61a80 !important;

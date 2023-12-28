@@ -9,17 +9,20 @@
   <body>
     <form action="/create" method="POST">
       <input type="text" name="title" placeholder="Title" required />
-      <textarea
-        name="postContent"
-        placeholder="What's on your mind?"
-        cols="30"
-        rows="10"
-        required
-      ></textarea>
+      <div class="box">
+        <textarea name="postContent" placeholder="What's on your mind?" cols="30" rows="10" required></textarea>
+        <small class="word-counter">0/400</small>
+      </div>
       <div>
         <input type="submit" value="Create Post" />
         <a href="/">Back</a>
       </div>
     </form>
+    <script>
+      const counter = document.querySelector(".word-counter");
+      document.querySelector("textarea").addEventListener("keydown", function() {
+        counter.textContent = this.value.length+"/400"
+      })
+    </script>
   </body>
 </html>
