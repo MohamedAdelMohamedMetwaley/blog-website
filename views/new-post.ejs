@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/newPostStyle.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/newPostStyle.css" />
     <title>Create a Post</title>
-</head>
-<body>
+  </head>
+  <body>
     <form action="/create" method="POST">
-        <input type="text" name="title" placeholder="Title" required>
-        <textarea name="postContent" placeholder="What's on your mind?" cols="30" rows="10" required></textarea>
-        <div>
-            <input type="submit" value="Create Post">
-            <button><a href="/">Back</a></button>
-        </div>
-        
-      </form>
-</body>
+      <input type="text" name="title" placeholder="Title" required />
+      <textarea
+        name="postContent"
+        placeholder="What's on your mind?"
+        cols="30"
+        rows="10"
+        required
+      ></textarea>
+      <div>
+        <input type="submit" value="Create Post" />
+        <a href="/">Back</a>
+      </div>
+    </form>
+  </body>
 </html>
